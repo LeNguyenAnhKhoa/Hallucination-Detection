@@ -1,0 +1,138 @@
+co just:
+
+You are an annotator concerned that the claim may not align with the reference. 
+Your task is to determine whether the reference entail, contradict, or is unverifiable to the claim.
+You will be given two inputs: claim, reference.
+A reference entails a claim if the information in the reference directly supports the claim being true and there is no conflicting information. The information logically leads to the claim being correct. 
+A reference contradicts a claim if it provides information that directly disproves or disagrees with any part of the claim. This includes stating different entities, numeric values, or relations compared to the claim. 
+A reference is unverifiable to a claim if it does not provide enough information to determine whether the claim is true or false. This happens if the reference is unrelated, missing key details, or too ambiguous.
+Example:
+##
+claim: Microstructured Waveguide Biosensors: Applications: Analysis of various beverages like water, tea, coffee, wine, and strong drinks, which suggests they could be used for all types of liquids without limitations [9].
+reference: [9]: The microstructured waveguide biosensor is described. The biosensor was tested in experiments for analysis of water, tea, coffee, wine and strong drinks. The biosensor has a high sensitivity to the optical properties of a medium, filling up the waveguide's core. The small size, good integration ability and compatibility for use in industrial settings make such biosensor very promising for various applications, including food industry.
+justification: Justification 1: The claim is consistent with the information provided in the reference.\nJustification 2: Both the reference and the claim discuss the biosensor's application in analyzing various beverages.
+answer: Entailment
+##
+claim: Fetal and Neonatal Outcomes: Lethal Forms: While some forms of OI are lethal, it is often assumed that all cases with severe skeletal deformities detected via prenatal imaging will lead to therapeutic abortion being recommended [5].
+reference: [5]: Osteogenesis imperfecta (OI) is a heterogeneous group of diseases affecting type I collagen and characterized by bone fragility. Lethal forms are rare and are characterized by micromelia associated with limb deformities. We report two cases of prenatally diagnosed lethal OI. Patients underwent ultrasound examination at 17 and 25 weeks of amenorrhoea, supplemented with fetal skeletal CT scanning in one case. Therapeutic abortion was recommended in both cases.
+justification: Overstatement of the claim by stating all cases with severe skeletal deformities detected via prenatal imaging will lead to therapeutic abortion as the reference only presented 2 cases.
+answer: Contradiction
+##
+claim: Specialized Procedures: Esophagectomy and Gastric Resection: These are now minimally invasive procedures for upper gastrointestinal cancers, with endoscopic techniques being more suitable for advanced-stage cancers [5].
+reference:  [5]: Despite advances in minimally invasive surgery, esophagectomy, and gastric resection remain morbid procedures for cancers of the upper gastrointestinal tract. Endoscopy offers patients effective screening and treatment of early-stage cancers. Endoscopic mucosal resection (EMR) can effectively remove benign and early malignant lesions. This chapter will focus on the use of EMR in the upper digestive tract.
+justification: Justification 1: The claim focused on endoscopic procedure for advanced stage cnacers while the reference focused on endoscopic procedure for early stage cancer.\nJustification 2: Related: The first part of the claim that there are now minimally invasive procedures for upper gastrointestinal cancers is true, however, the second part which states "with endoscopic techniques being more suitable for advanced-stage cancers" is not mentioned in the reference per se.
+answer: Unverifiable
+##
+Input:
+
+---------------------------------------------------------------------------------------------------------
+
+ko just:
+You are an annotator concerned that the claim may not align with the reference. Your task is to determine whether the reference entail, contradict, or is unverifiable to the claim.
+You will be given two inputs: claim, reference.
+You are asked to evaluate the generated text looking at the input text and the target text.
+A reference entails a claim if the information in the reference directly supports the claim being true and there is no conflicting information. The information logically leads to the claim being correct. A reference contradicts a claim if it provides information that directly disproves or disagrees with any part of the claim. This includes stating different entities, numeric values, or relations compared to the claim. A reference is unverifiable to a claim if it does not provide enough information to determine whether the claim is true or false. This happens if the reference is unrelated, missing key details, or too ambiguous.
+Example:
+##
+claim: 8. X-ray Techniques: X-ray Absorption and Diffraction: Methods like extended X-ray absorption fine structure, X-ray diffraction, and low-angle scattering are used to gain and analyze experimental data for material examination .
+reference: Ways to gain and analyze experimental data obtained by X-ray techniques used in material examination are described. Emphasis is on the methods of extended X-ray absorption fine structure, X-ray diffraction, and X-ray low-angle scattering.
+answer: Entailment
+##
+claim: ### Machine Condition Monitoring - **Predictive Maintenance**: ML algorithms are not effective in predicting future damages in technical machines, such as turbines and pumps, as they fail to accurately model and extrapolate damage mechanisms based on sensor data.
+reference: Many technical machines are instrumented. Temperatures, pressures, flow rates, vibrations and so on are measured and centrally archived. These data can be used to reliably predict future damages several days in advance. A self-learning mathematical method is used to do this, which models the machine and can extrapolate the damage mechanism into the future. Examples include turbines, pumps and catalytic reactors that will be treated in this paper.
+answer: Contradiction
+##
+claim: Ensuring that chatbots can handle a wide range of queries and provide accurate, relevant information is crucial for their effectiveness .
+reference:  In this paper we learn how to manage a dialogue relying on discourse of its utterances. We define extended discourse trees, introduce means to manipulate with them, and outline scenarios of multi-document navigation to extend the abilities of the interactive information retrieval-based chat bot. We also provide evaluation results of the comparison between conventional search and chat bot enriched with the multi-document navigation.
+answer: Unverifiable
+##
+Your response only answer 'Entailment' or 'Contradiction' or 'Unverifiable' 
+Input:
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+3-ex:
+You are an annotator concerned that the claim may not align with the reference. Your task is to determine whether the reference entail, contradict, or is unverifiable to the claim.
+You will be given two inputs: claim, reference.
+A reference entails a claim if the information in the reference directly supports the claim being true and there is no conflicting information. The information logically leads to the claim being correct. A reference contradicts a claim if it provides information that directly disproves or disagrees with any part of the claim. This includes stating different entities, numeric values, or relations compared to the claim. A reference is unverifiable to a claim if it does not provide enough information to determine whether the claim is true or false. This happens if the reference is unrelated, missing key details, or too ambiguous.
+Example:
+##
+claim: 8. X-ray Techniques: X-ray Absorption and Diffraction: Methods like extended X-ray absorption fine structure, X-ray diffraction, and low-angle scattering are used to gain and analyze experimental data for material examination .
+reference: Ways to gain and analyze experimental data obtained by X-ray techniques used in material examination are described. Emphasis is on the methods of extended X-ray absorption fine structure, X-ray diffraction, and X-ray low-angle scattering.
+justification: The claim is supported by the reference. - "Ways to gain and analyze experimental data obtained by X-ray techniques used in material examination are described. Emphasis is on the methods of extended X-ray absorption fine structure, X-ray diffraction, and X-ray low-angle scattering."
+answer: Entailment
+##
+claim: Disadvantages of Dropdown Menus: Dropdown menus can hide information, requiring users to perform additional actions to view all options .
+reference: Hierarchical menus are a common feature of the user interface for interactive software. Dynamic menus allow users to add items to the menu structure. Such dynamic menus are subject to usability problems of hiding information because of overlapping data and of requiring large in-line movement of the mouse or input device. This paper presents an improved design for menu display and interaction to provide easier viewing and navigation.
+justification: The reference clearly states that dynamic (dropdown) menus may hide information and require large in-line movement, which directly supports the claims two parts: that dropdown menus can obscure information and require additional user actions to reveal it.
+answer: Entailment
+##
+claim: Application: Focuses on long-term rehabilitation and recovery, offering outpatient services close to the patient's home .
+reference: The VHA polytrauma system of care is a comprehensive, integrated treatment program, based on decades of research and clinical experience in geriatric care and in the rehabilitation of individuals with acute and chronic disability. The PSC uses an interdisciplinary team model approach, and an array of outpatient rehabilitation services close to the patient's home is offered at rehabilitation sites within the PSC. Copyright © 2010 American Society on Aging; all rights reserved.
+justification: The reference confirms that the VHA polytrauma system provides outpatient rehabilitation services near the patient's home, aligning with the claim.
+answer: Entailment
+##
+claim: ### Machine Condition Monitoring - **Predictive Maintenance**: ML algorithms are not effective in predicting future damages in technical machines, such as turbines and pumps, as they fail to accurately model and extrapolate damage mechanisms based on sensor data.
+reference: Many technical machines are instrumented. Temperatures, pressures, flow rates, vibrations and so on are measured and centrally archived. These data can be used to reliably predict future damages several days in advance. A self-learning mathematical method is used to do this, which models the machine and can extrapolate the damage mechanism into the future. Examples include turbines, pumps and catalytic reactors that will be treated in this paper.
+justification: The claim directly contradicts with the given reference by mentioning that "ML algorithms are not effective in predicting future damages" as the reference mentions quite opposite of it.
+answer: Contradiction
+##
+claim: Energy consumption of twin-screw extruders cannot be accurately predicted through simulation calculations, which often leads to underutilization of torque and suboptimal machine performance .
+reference: COMPOUNDING, the energy consumption of twin-screw extruders can be determined in advance by simulation calculation. This allows full torque utilisation, so that compounders can maximise use of available machine performance potential. © Carl Hanser Verlag.
+justification: The claim is saying cannot, but the reference says can be, so the claim is just opposite to the reference given.
+answer: Contradiction
+##
+claim: Human-Robot Interaction (HRI): Robots are ineffective as guides in environments such as museums, where they fail to interact with visitors and provide relevant information .
+reference: As a testbed for real-world experimentation on HRI and dynamic interaction models, this paper presents an autonomous robot system acting as guide in a German arts museum. The visitors' evaluation of this system is analyzed using a questionnaire and reveals issues for subsequent analysis of the real-time interaction.
+justification: The claim misinterprets the reference by mentioning that "robots are ineffective and they fail to interact with visitors", while the reference acknowledges "issues but does not explicitly mentions a complete failure".
+answer: Contradiction
+##
+claim: Ensuring that chatbots can handle a wide range of queries and provide accurate, relevant information is crucial for their effectiveness .
+reference:  In this paper we learn how to manage a dialogue relying on discourse of its utterances. We define extended discourse trees, introduce means to manipulate with them, and outline scenarios of multi-document navigation to extend the abilities of the interactive information retrieval-based chat bot. We also provide evaluation results of the comparison between conventional search and chat bot enriched with the multi-document navigation.
+justification: The claim and reference both discusses about the effectiveness of chatbots but the claim "mentions about wide range of queries" which is not directly mentioned in the reference.
+answer: Unverifiable
+##
+claim: Suggestions for waste disposal techniques for space stations, particularly the Chinese space station, are discussed, emphasizing the need for advanced waste management solutions .
+reference:  [3] The inspect technology of space garbage is analyzed, such as radar, laser, lidar and so on. With STK, the move contrail of space garbage is also simulated. Finally, the future of the space garbage is assumed.    
+justification: The reference discusses space debris tracking technologies, not waste disposal inside space stations, making the claim unrelated and unverifiable based on that source.
+answer: Unverifiable
+##
+claim: Origins and Histology: Ewing sarcoma: This type of cancer arises from neural crest cells. It is characterized by the production of small round blue cells by malignant cells .
+reference:  Osteosarcoma and Ewing sarcoma are the most common bone malignancies that affect children and adolescents, with an incidence of six new cases/1,000,000 inhabitants/year, accounting for approximately 7% of cancer diagnoses. They may be defined as neoplastic diseases that involve the bone tissues, the former arising from the mesenchymal bone forming cells and the latter from the neural crest cells.
+justification: no mention of round blue cells
+answer: Unverifiable
+##
+Input:
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+    You are an annotator concerned that the claim may not align with the reference. Your task is to determine whether the reference entail, contradict, or is unverifiable to the claim.
+    You will be given two inputs: claim, reference.
+    You are asked to evaluate the generated text looking at the input text and the target text.
+    A reference entails a claim if the information in the reference directly supports the claim being true and there is no conflicting information. The information logically leads to the claim being correct. A reference contradicts a claim if it provides information that directly disproves or disagrees with any part of the claim. This includes stating different entities, numeric values, or relations compared to the claim. A reference is unverifiable to a claim if it does not provide enough information to determine whether the claim is true or false. This happens if the reference is unrelated, missing key details, or too ambiguous.
+    Example:
+    ##
+    claim: 8. X-ray Techniques: X-ray Absorption and Diffraction: Methods like extended X-ray absorption fine structure, X-ray diffraction, and low-angle scattering are used to gain and analyze experimental data for material examination .
+    reference: Ways to gain and analyze experimental data obtained by X-ray techniques used in material examination are described. Emphasis is on the methods of extended X-ray absorption fine structure, X-ray diffraction, and X-ray low-angle scattering.
+    answer: Entailment
+    ##
+    claim: ### Machine Condition Monitoring - **Predictive Maintenance**: ML algorithms are not effective in predicting future damages in technical machines, such as turbines and pumps, as they fail to accurately model and extrapolate damage mechanisms based on sensor data.
+    reference: Many technical machines are instrumented. Temperatures, pressures, flow rates, vibrations and so on are measured and centrally archived. These data can be used to reliably predict future damages several days in advance. A self-learning mathematical method is used to do this, which models the machine and can extrapolate the damage mechanism into the future. Examples include turbines, pumps and catalytic reactors that will be treated in this paper.
+    answer: Contradiction
+    ##
+    claim: Ensuring that chatbots can handle a wide range of queries and provide accurate, relevant information is crucial for their effectiveness .
+    reference:  In this paper we learn how to manage a dialogue relying on discourse of its utterances. We define extended discourse trees, introduce means to manipulate with them, and outline scenarios of multi-document navigation to extend the abilities of the interactive information retrieval-based chat bot. We also provide evaluation results of the comparison between conventional search and chat bot enriched with the multi-document navigation.
+    answer: Unverifiable
+    ##
+    Your response only answer 'Entailment' or 'Contradiction' or 'Unverifiable'
+    Input:
+    claim: Dressing Choices: The choice of wound dressings can impact odor management. Dressings that do not adequately absorb exudate or control bacterial growth can exacerbate odor issues .
+    reference: [10] Background: Diabetic foot is an underestimated and redoubtable diabetes complication. The aims of our study were to assess diabetic foot ulcer risk factors according to International Working Group on the Diabetic Foot (IWGDF) classification, stratify patients into risk categories and identify factors associated with higher-risk grade. Methods: Cross-sectional setting over a period of 07 months, patients were randomly selected from the diabetic outpatients attending our unit of diabetology. Questionnaire and clinical examination were made by the same physician. Patients free of active foot ulcer were included. Results: Among 230 patients evaluated, 10 had an active foot ulcer and were excluded. Five patients (2.27%) had a history of foot ulcer and 3(1.36%) had a lower-limb amputation. Sensory neuropathy, as measured by the 5.07(10 g) Semmes-Weinstein monofilament testing, was present in 23.63% of patients, whereas 36.82% had a peripheral arterial disease based on clinical findings, and 43.63% had foot deformities. According to the IWGDF classification, Group 0: 72.72%, Group 1: 5.9%, Group 2: 17.73% and Group 3: 3.63%. After univariate analysis, patients in higher-risk groups were significantly more often female, had higher age and BMI, longer diabetes duration, elevated waist circumference, low school level, retinopathy and hyperkeratosis. Multivariate logistic regression analysis identified 3 significant independent factors associated with high-risk groups: retinopathy (OR = 2.529, CI95 [1.131-5.655], p = 0.024), hyperkeratosis (OR = 2.658, CI95 [1.222-5.783], p = 0.014) and school level (OR = 0.489, CI95 [0.253-9.44], p = 0.033). Conclusions: Risk factors for foot ulceration were rather common in outpatients with diabetes. The screening of patients at risk for foot ulceration should start early, integrated with sustainable patient education. Missing 
+    answer: 

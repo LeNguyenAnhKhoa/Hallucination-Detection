@@ -12,3 +12,8 @@ This repository provides the code for the A.M.P system for the SDP share task.
 
 - Our system focuses on prompting for LLMs like o3-mini or gemini-2.5-flash. We use few-shot prompting technique and define fields for LLMs like task definition or output concepts.
 - These image below show the example prompt for 3 classes: Entailment, Contradiction and Unverifiable. To see all the prompts for each subtask refer to the `.txt` files in the `subtask1` and `subtask2` folders.
+
+<p align="center"><img src="https://github.com/user-attachments/assets/7e709bcf-f437-436f-9b11-f15976bdd8d6"></p>
+
+- Instead of directly for subtask 1, we based on the decision tree above took the prediction result directly from subtask 2 and reduced it to subtask 1. This increases the achieved result and makes the prediction simpler.
+<p align="center"><img src="https://github.com/user-attachments/assets/b6dacc89-2cba-47fe-8806-b6665238f8af"></p>

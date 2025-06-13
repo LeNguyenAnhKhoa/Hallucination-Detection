@@ -41,3 +41,10 @@ python gemini_inference.py --model 'gemini-2.5-flash-preview-04-17' --output './
 ```python3
 python gpt_inference.py --model 'gpt-4o-mini' --output './Result/gpt4o.csv' --sleep_time 0.3
 ```
+### Evaluation
+```python3
+python score.py --file './Result/gpt-4o-mini.csv'
+```
+### Submission
+- View files in folder `notebook` to easily run prediction and evaluation.
+- We also put the testing and evaluation code of the models in these files for easier running.

@@ -48,3 +48,4 @@ python score.py --file './Result/gpt-4o-mini.csv'
 ### Submission
 - View files in folder `notebook` to easily run prediction and evaluation.
 - We also put the testing and evaluation code of the models in these files for easier running.
+- View `.txt` file in each subtask folder for more prompts.

@@ -17,3 +17,7 @@ This repository provides the code for the A.M.P system for the SDP share task.
 
 - Instead of directly for subtask 1, we based on the decision tree above took the prediction result directly from subtask 2 and reduced it to subtask 1. This increases the achieved result and makes the prediction simpler.
 <p align="center"><img src="https://github.com/user-attachments/assets/b6dacc89-2cba-47fe-8806-b6665238f8af"></p>
+
+## Data and Model
+- For the raw training data, see the `.csv` file in folder `Data` or visit on [Kaggle page](https://www.kaggle.com/competitions/hallucination-detection-scientific-content-2025/data) for the full dataset.
+- We use models through API. With all `.py` file, set your **API_KEY** before running. For Gemini models, see documents at [Google AI](https://ai.google.dev/gemini-api/docs?authuser=3) to better understand how to use the API. For OpenAI models, see documents at [OpanAI platform](https://platform.openai.com/docs/overview).

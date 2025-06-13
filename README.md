@@ -21,3 +21,10 @@ This repository provides the code for the A.M.P system for the SDP share task.
 ## Data and Model
 - For the raw training data, see the `.csv` file in folder `Data` or visit on [Kaggle page](https://www.kaggle.com/competitions/hallucination-detection-scientific-content-2025/data) for the full dataset.
 - We use models through API. With all `.py` file, set your **API_KEY** before running. For Gemini models, see documents at [Google AI](https://ai.google.dev/gemini-api/docs?authuser=3) to better understand how to use the API. For OpenAI models, see documents at [OpanAI platform](https://platform.openai.com/docs/overview).
+## How to Run
+### Installation
+```bash
+git clone https://github.com/LeNguyenAnhKhoa/Hallucination-Detection.git
+cd Hallucination-Detection
+pip install -r requirements.txt
+```

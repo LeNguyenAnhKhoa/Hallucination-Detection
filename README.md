@@ -28,3 +28,16 @@ git clone https://github.com/LeNguyenAnhKhoa/Hallucination-Detection.git
 cd Hallucination-Detection
 pip install -r requirements.txt
 ```
+### Data preprocessing
+```python3
+python clean_data.py --subtask1 './Data/subtask1_train_batch3.csv' --subtask2 './Data/subtask2_train_batch3.csv' --output './Data/cleaned_data3.csv'
+```
+### Prediction
+- For Gemini models:
+```python3
+python gemini_inference.py --model 'gemini-2.5-flash-preview-04-17' --output './Result/gem2_3.csv' --sleep_time 6.1
+```
+- For OpenAI models:
+```python3
+python gpt_inference.py --model 'gpt-4o-mini' --output './Result/gpt4o.csv' --sleep_time 0.3
+```

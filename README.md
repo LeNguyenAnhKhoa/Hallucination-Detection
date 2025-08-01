@@ -21,7 +21,7 @@ The system description paper is published in the proceedings of the 5th SDP work
 <p align="center"><img src="https://github.com/user-attachments/assets/b6dacc89-2cba-47fe-8806-b6665238f8af"></p>
 
 ## Poster
-<p align="center"><img src="https://github.com/user-attachments/assets/b6dacc89-2cba-47fe-8806-b6665238f8af"></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/046f0b3e-2ca1-4278-95e6-cd6ef4b46977"></p>
 
 ## Data and Model
 - For the raw training data, see the `.csv` file in folder `Data` or visit on [Kaggle page](https://www.kaggle.com/competitions/hallucination-detection-scientific-content-2025/data) for the full dataset.

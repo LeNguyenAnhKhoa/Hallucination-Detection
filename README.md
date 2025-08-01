@@ -1,6 +1,6 @@
 # A.M.P at SciHal2025: Automated Hallucination Detection in Scientific Content via LLMs and Prompt Engineering
 
-This repository provides the code for the A.M.P system for the SDP share task. Our system achieved [4th place in subtask 1](https://www.kaggle.com/competitions/hallucination-detection-scientific-content-2025/leaderboard) and [2nd place in subtask 2](https://www.kaggle.com/competitions/hallucination-detection-for-scientific-content-2025-subtask2).
+This repository provides the code for the A.M.P system for the SDP share task. Our system achieved [4th place in subtask 1](https://www.kaggle.com/competitions/hallucination-detection-scientific-content-2025/leaderboard) and [2nd place in subtask 2](https://www.kaggle.com/competitions/hallucination-detection-for-scientific-content-2025-subtask2/leaderboard).
 
 The system description paper is published in the proceedings of the 5th SDP workshop (co-located with ACL 2025) [[paper]](https://aclanthology.org/2025.sdp-1.31/).
 

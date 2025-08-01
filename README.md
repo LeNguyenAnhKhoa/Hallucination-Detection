@@ -49,3 +49,30 @@ python score.py --file './Result/gpt-4o-mini.csv'
 - View files in folder `notebook` to easily run prediction and evaluation.
 - We also put the testing and evaluation code of the models in these files for easier running.
 - View `.txt` file in each subtask folder for more prompts.
+
+## Citation
+```
+@inproceedings{khoa-van-2025-p,
+    title = "{A}.{M}.{P} at {S}ci{H}al2025: Automated Hallucination Detection in Scientific Content via {LLM}s and Prompt Engineering",
+    author = "Khoa, Le Nguyen Anh  and
+      V{\u{a}}n, Th{\`i}n {\DJ}ặng",
+    editor = "Ghosal, Tirthankar  and
+      Mayr, Philipp  and
+      Singh, Amanpreet  and
+      Naik, Aakanksha  and
+      Rehm, Georg  and
+      Freitag, Dayne  and
+      Li, Dan  and
+      Schimmler, Sonja  and
+      De Waard, Anita",
+    booktitle = "Proceedings of the Fifth Workshop on Scholarly Document Processing (SDP 2025)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.sdp-1.31/",
+    pages = "328--335",
+    ISBN = "979-8-89176-265-7",
+    abstract = "This paper presents our system developed for SciHal2025: Hallucination Detection for Scientific Content. The primary goal of this task is to detect hallucinated claims based on the corresponding reference. Our methodology leverages strategic prompt engineering to enhance LLMs' ability to accurately distinguish between factual assertions and hallucinations in scientific contexts. Moreover, we discovered that aggregating the fine-grained classification results from the more complex subtask (subtask 2) into the simplified label set required for the simpler subtask (subtask 1) significantly improved performance compared to direct classification for subtask 1. This work contributes to the development of more reliable AI-powered research tools by providing a systematic framework for hallucination detection in scientific content."
+}
+```
